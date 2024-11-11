@@ -2,7 +2,7 @@
   "canisters": {
     "backend": {
       "type": "rust",
-      "main": "main/code/lib.rs",
+      "main": "main/src/lib.rs",
       "candid": "main/backend.did"
     },
     "frontend": {
@@ -15,5 +15,5 @@
       "bind": "127.0.0.1:8000"
     }
   },
-  "version": 0.24.1
+  "version": 0.24
 }
