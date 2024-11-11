@@ -1,20 +1,19 @@
 package main
 
-import (
-    "syscall/js"
-)
+import "syscall/js"
 
-// Fungsi untuk menambahkan dua angka
+// Fungsi penjumlahan (sama seperti sebelumnya)
 func add(this js.Value, p []js.Value) interface{} {
-    // Mendapatkan dua angka pertama dari parameter dan menambahkannya
-    result := p[0].Int() + p[1].Int()
-    return result
+    return p[0].Int() + p[1].Int()
 }
 
-// Fungsi utama untuk menginisialisasi fungsi-fungsi Go dalam JavaScript
 func main() {
-    // Mengekspos fungsi `add` ke lingkungan JS sebagai "add"
+    // Register fungsi dari setiap modul
     js.Global().Set("add", js.FuncOf(add))
-    // Menjaga program berjalan
+    registerAuth()
+    registerEncryption()
+    registerMath()
+
+    // Menjaga aplikasi berjalan
     select {}
 }
