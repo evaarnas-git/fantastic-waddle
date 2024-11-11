@@ -1,0 +1,9 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ic-cdk = "0.12"  # Versi terbaru SDK IC untuk Rust
+ic-cdk-macros = "0.10"
+wasmtime = "0.31.0"
