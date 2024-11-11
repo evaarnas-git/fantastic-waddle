@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "backend": {
+      "type": "rust",
+      "main": "main/code/lib.rs",
+      "candid": "main/backend.did"
+    },
+    "frontend": {
+      "type": "assets",
+      "source": "root"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000"
+    }
+  },
+  "version": 0.24.1
+}
