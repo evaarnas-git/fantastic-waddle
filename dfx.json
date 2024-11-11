@@ -7,7 +7,7 @@
     },
     "frontend": {
       "type": "assets",
-      "source": "root"
+      "source": "src"
     }
   },
   "networks": {
